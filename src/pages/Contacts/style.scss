@@ -1,0 +1,172 @@
+@import '../../assets/styles/theme-variables';
+@import '../../assets/styles/mixins';
+
+.contacts {
+  margin: 0 auto 50px;
+  .contact-form {
+    max-width: 650px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    .inputs-wrapper {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      margin-bottom: 50px;
+      .form-item-wrapper {
+        @include epic-sides() {
+          background: #fff;
+        }
+        &:first-child {
+          margin-right: 50px;
+        }
+        .form-item {
+          display: inline-block;
+          width: 300px;
+          padding: 13px 0 13px 15px;
+          font-family: "Open Sans", sans, serif;
+          font-weight: 400;
+          color: #377D6A;
+          background-color: #efefef;
+          border: 1px solid #000;
+          outline: 0;
+          text-indent: 70px;
+          transition: all .3s ease-in-out;
+          border-bottom-left-radius: 15px 255px;
+          border-bottom-right-radius: 225px 15px;
+          border-top-left-radius: 255px 15px;
+          border-top-right-radius: 15px 225px;
+          line-height: 1.2;
+          &::-webkit-input-placeholder {
+            color: #efefef;
+            text-indent: 0;
+            font-weight: 300;
+          }
+
+          + label {
+            display: inline-block;
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            padding: 10px 15px;
+            text-shadow: 0 1px 0 rgba(19,74,70,.4);
+            background: #7AB893;
+            font-family: 'special_eliteregular', serif !important;
+            font-size: 16px;
+            line-height: 1.2;
+            //border-top-left-radius: 3px;
+            //border-bottom-left-radius: 3px;
+            border-bottom-left-radius: 15px 255px;
+            border-bottom-right-radius: 225px 15px;
+            border-top-left-radius: 255px 15px;
+            border-top-right-radius: 15px 225px;
+            transform-origin: 2px 2px;
+            transform: rotate(0);
+            // There should be a better way
+            animation: swing-back .4s 1 ease-in-out;
+          }
+          &:focus,
+          &:active {
+            color: #377D6A;
+            text-indent: 0;
+            background: #fff;
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+
+            &::-webkit-input-placeholder {
+              color: #aaa;
+            }
+            + label {
+              animation: swing 1.4s 1 ease-in-out;
+              transform: rotate(82deg);
+            }
+          }
+        }
+      }
+    }
+    input {
+      padding: 5px 10px;
+    }
+    textarea {
+      width: 100%;
+      padding: 15px 10px;
+      font-weight: 400;
+      color: #377D6A;
+      background-color: #efefef;
+      outline: 0;
+      border-bottom-left-radius: 15px 255px;
+      border-bottom-right-radius: 225px 15px;
+      border-top-left-radius: 255px 15px;
+      border-top-right-radius: 15px 225px;
+      line-height: 1.2;
+    }
+    input, textarea {
+      font-family: 'special_eliteregular', serif !important;
+      border-bottom-left-radius: 15px 255px;
+      border-bottom-right-radius: 225px 15px;
+      border-top-left-radius: 255px 15px;
+      border-top-right-radius: 15px 225px;
+
+    }
+    & > .form-item-wrapper {
+      .form-item {
+        min-height: 200px;
+      }
+    }
+  }
+  .social-sites {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 20%;
+    margin: 100px auto 0;
+    .social-item {
+      font-size: 1.2rem;
+      line-height: 1.2;
+      margin: 1rem;
+      svg {
+        @include themify($themes) {
+          fill: themed('socialIcon');
+        }
+      }
+
+      &:hover {
+        transition: 0.3s;
+        svg {
+          fill: #7b8287;
+        }
+      }
+    }
+  }
+}
+
+@keyframes swing {
+  0% {
+    transform: rotate(0);
+  }
+  20% {
+    transform: rotate(116deg);
+  }
+  40% {
+    transform: rotate(60deg);
+  }
+  60% {
+    transform: rotate(98deg);
+  }
+  80% {
+    transform: rotate(76deg);
+  }
+  100% {
+    transform: rotate(82deg);
+  }
+}
+@keyframes swing-back {
+  0% {
+    transform: rotate(82deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}

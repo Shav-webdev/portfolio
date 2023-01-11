@@ -1,0 +1,30 @@
+@import '../../assets/styles/theme-variables';
+.nav {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  .menu {
+    display: flex;
+    list-style: none;
+    width: 100%;
+    padding: 0 40px;
+    justify-content: space-evenly;
+    .menu-item {
+      margin: 0 15px;
+      .menu-item-link {
+        font-family: 'special_eliteregular', serif !important;
+        @include themify($themes) {
+          color: themed('navTextColor');
+        }
+        &.active {
+          @include themify($themes) {
+            color: themed('activeNavTextColor');
+          }
+        }
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

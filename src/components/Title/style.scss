@@ -1,0 +1,12 @@
+@import '../../assets/styles/theme-variables';
+
+.title {
+  font-family: 'special_eliteregular', serif !important;
+  font-size: 3em;
+  line-height: 1;
+  text-align: center;
+  padding: 0 20px;
+  @include themify($themes) {
+    color: themed('titleTextColor');
+  }
+}
