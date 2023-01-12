@@ -2,6 +2,7 @@
   "name": "portfolio",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://Shav-webdev.github.io/portfolio",
   "dependencies": {
     "@emailjs/browser": "^3.10.0",
     "@formspree/react": "^2.4.1",
@@ -31,6 +32,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -54,6 +57,7 @@
   },
   "devDependencies": {
     "@types/react-scroll": "^1.8.4",
+    "gh-pages": "^4.0.0",
     "prettier": "^2.7.1"
   }
 }
