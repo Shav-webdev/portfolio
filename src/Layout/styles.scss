@@ -70,6 +70,30 @@
             box-shadow: 0 5px 10px rgba(153, 153, 153, 0.4);
             background-color: #fff;
           }
+          &.light {
+            span {
+              left: 0;
+              svg {
+                position: absolute;
+                left: 3px;
+                top: -11px;
+                width: 20px;
+                height: 20px;
+              }
+            }
+          }
+          &.dark {
+            span {
+              right: 3px;
+              svg {
+                position: absolute;
+                right: 3px;
+                width: 15px;
+                height: 15px;
+                top: 2px;
+              }
+            }
+          }
         }
 
         .toggle-btn__input:checked ~ .toggle-btn__input-label {
@@ -77,6 +101,12 @@
             background: #fff;
             left: calc(100% - 3px);
             transform: translateX(-100%);
+          }
+          & > span {
+            position: absolute;
+            svg {
+              position: absolute;
+            }
           }
         }
 

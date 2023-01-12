@@ -5,7 +5,8 @@ const Footer: FC = () => {
   return (
     <footer className="footer">
       <div className="footer-content">
-        &copy; {new Date().getFullYear()} <span>Light/Dark mode app</span>
+        &copy; {new Date().getFullYear()}{' '}
+        <span>Armenia, Yerevan. All rights reserved. </span>
       </div>
     </footer>
   );
