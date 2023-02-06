@@ -17,7 +17,7 @@ const Home = () => {
       <TypeAnimation
         className={'text-animation'}
         sequence={[
-          "Hi, I'm Shavarsh, JavaScript/React developer", // Types 'One'
+          "Hi, I'm Shavarsh, JavaScript developer", // Types 'One'
           1000,
           () => {
             // Place optional callbacks anywhere in the array

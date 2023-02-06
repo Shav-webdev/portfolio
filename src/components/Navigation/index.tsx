@@ -1,11 +1,14 @@
 import { navigation } from 'helpers/constants';
 import './style.scss';
 import { Link } from 'react-scroll';
+import HamburgerMenu from '../HamburgerMenu';
+import ThemeToggle from '../ThemeToggle';
 
 const Navigation = () => {
   const handleSetActive = function (to: any) {};
   return (
     <nav className={'nav'}>
+      <HamburgerMenu />
       <ul className={'menu'}>
         {navigation.map((el) => {
           return (
@@ -26,6 +29,7 @@ const Navigation = () => {
           );
         })}
       </ul>
+      <ThemeToggle />
     </nav>
   );
 };

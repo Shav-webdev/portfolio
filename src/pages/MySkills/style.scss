@@ -1,0 +1,36 @@
+@import '../../assets/styles/media';
+.skills {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  .skills-text {
+    width: 55%;
+    @include media('xs') {
+      width: 100%;
+      text-align: center;
+    }
+    @include media('sm') {
+      width: 100%;
+      text-align: center;
+    }
+  }
+  .skills-globe {
+    width: 45%;
+    @include media('xs') {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+    @include media('sm') {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  }
+  @include media('xs') {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  @include media('sm') {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+}

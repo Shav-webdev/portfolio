@@ -1,6 +1,6 @@
 $breakPoints: (
-        xs: (start: null, end: '576'),
-        sm: (start: '576', end: '768px'),
+        xs: (start: null, end: '576px'),
+        sm: (start: '576px', end: '768px'),
         md: (start: '768px', end: '992px'),
         lg:(start: '992px', end: '1200px'),
         xl:(start: '1200px', end: '1400px'),
@@ -37,7 +37,7 @@ $breakPoints: (
 }
 
 $breakPoints-up: (
-        sm: (start: '576'),
+        sm: (start: '576px'),
         md: (start: '768px'),
         lg:(start: '992px'),
         xl:(start: '1200px'),

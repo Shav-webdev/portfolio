@@ -1,0 +1,9 @@
+@import '../../assets/styles/media';
+.about-txt {
+  @include media('xs') {
+    text-align: center;
+  }
+  @include media('sm') {
+    text-align: center;
+  }
+}

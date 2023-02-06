@@ -1,3 +1,5 @@
+@import '../../assets/styles/media';
+
 $bp-md: 600px;
 $bp-lg: 800px;
 
@@ -33,10 +35,17 @@ $bp-lg: 800px;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 2px 2px rgba(0, 0, 0, 0.1),
     0 4px 4px rgba(0, 0, 0, 0.1), 0 8px 8px rgba(0, 0, 0, 0.1),
     0 16px 16px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
 
   @media (min-width: $bp-md) {
     height: 350px;
   }
+  //@include media('xs') {
+  //  margin-bottom: 20px;
+  //}
+  //@include media('sm') {
+  //
+  //}
 }
 .card-before {
   content: '';
@@ -85,6 +94,12 @@ $bp-lg: 800px;
   );
   transform: translateY(-50%);
   transition: transform calc(var(--d) * 2) var(--e);
+  @include media('xs') {
+    transform: translateY(-20%);
+  }
+  @include media('sm') {
+    transform: translateY(-20%);
+  }
 }
 
 .card-content {

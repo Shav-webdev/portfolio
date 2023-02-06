@@ -1,14 +1,17 @@
 @import '../../assets/styles/theme-variables';
+@import '../../assets/styles/media';
 .nav {
   display: flex;
   justify-content: center;
+  align-items: center;
   width: 100%;
+  padding: 0 20px;
   .menu {
     display: flex;
+    justify-content: space-between;
     list-style: none;
     width: 100%;
-    padding: 0 40px;
-    justify-content: space-evenly;
+    padding-right: 40px;
     .menu-item {
       margin: 0 15px;
       .menu-item-link {
@@ -26,5 +29,45 @@
         }
       }
     }
+    @include media('xs') {
+      flex-direction: column;
+    }
+    @include media('sm') {
+      flex-direction: column;
+    }
+  }
+
+  .hamburger-menu {
+    &.is-open {
+      & ~ .menu {
+        display: flex;
+      }
+    }
+    &.is-closed {
+      & ~ .menu {
+        @include media('xs') {
+          display: none;
+        }
+        @include media('sm') {
+          display: none;
+        }
+      }
+    }
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  @include media('xs') {
+    justify-content: space-between;
+    position: relative;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  @include media('sm') {
+    justify-content: space-between;
+    position: relative;
+    flex-direction: column;
+    align-items: flex-start;
   }
 }

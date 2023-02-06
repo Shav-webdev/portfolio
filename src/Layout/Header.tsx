@@ -8,7 +8,6 @@ const Header: FC = () => {
     <header className="header">
       <div className="header-content">
         <Navigation />
-        <ThemeToggle />
       </div>
     </header>
   );

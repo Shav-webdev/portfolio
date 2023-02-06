@@ -1,4 +1,5 @@
 @import '../../assets/styles/theme-variables';
+@import '../../assets/styles/media';
 
 .title {
   font-family: 'special_eliteregular', serif !important;
@@ -8,5 +9,11 @@
   padding: 0 20px;
   @include themify($themes) {
     color: themed('titleTextColor');
+  }
+  @include media('xs') {
+    margin: 15px 0;
+  }
+  @include media('sm') {
+    margin: 15px 0;
   }
 }

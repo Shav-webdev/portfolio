@@ -6,12 +6,6 @@ export interface CardProps {
   desc?: string;
 }
 
-// .card
-//     .content
-// h2.title= title
-// p.copy= copy
-// button.btn= button
-
 const Card = ({ img, url, name, desc }: CardProps) => {
   return (
     <div className="card">
