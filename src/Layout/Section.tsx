@@ -1,4 +1,4 @@
-import { FC, ReactNode } from 'react';
+import React, { FC, LazyExoticComponent, ReactNode } from 'react';
 
 interface SectionProps {
   children: ReactNode;

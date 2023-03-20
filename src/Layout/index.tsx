@@ -6,22 +6,25 @@ import Footer from './Footer';
 import Section from './Section';
 import { Element } from 'react-scroll';
 import { navigation } from '../helpers/constants';
+import ScrollLine from '../components/ScrollLine';
 
 interface LayoutProps {
-  children?: ReactNode;
+  children?: (props: any) => Element;
 }
 
 const Layout: FC<LayoutProps> = ({ children }) => {
   return (
     <div className="layout-wrapper">
+      <ScrollLine />
       <div className="main-wrapper">
         <Header />
         <Main>
           <div className="element" id="containerElement">
             {navigation.map((el) => {
+              const { to, name, Component } = el;
               return (
-                <Element key={el.name} name={el.to}>
-                  <Section>{el.component()}</Section>
+                <Element key={name} name={to}>
+                  <Section>{Component}</Section>
                 </Element>
               );
             })}

@@ -1,9 +1,11 @@
-import Home from 'pages/Home';
-import Projects from '../pages/Projects';
-import About from '../pages/About';
-import Contacts from '../pages/Contacts';
-import MySkills from '../pages/MySkills';
+import { lazy } from 'react';
 import { FacebookIcon, GithubIcon, LinkedInIcon } from '../assets/icons';
+
+const Home = lazy(() => import('pages/Home'));
+const About = lazy(() => import('../pages/About'));
+const Projects = lazy(() => import('../pages/Projects'));
+const Contacts = lazy(() => import('../pages/Contacts'));
+const MySkills = lazy(() => import('../pages/MySkills'));
 
 export const navigation = [
   {
@@ -12,7 +14,7 @@ export const navigation = [
     route: '/',
     to: 'home',
     icon: '',
-    component: Home,
+    Component: <Home />,
   },
   {
     id: 2,
@@ -20,7 +22,7 @@ export const navigation = [
     route: '/about',
     to: 'about',
     icon: '',
-    component: About,
+    Component: <About />,
   },
   {
     id: 3,
@@ -28,7 +30,7 @@ export const navigation = [
     route: '/projects',
     to: 'projects',
     icon: '',
-    component: Projects,
+    Component: <Projects />,
   },
   {
     id: 4,
@@ -36,7 +38,7 @@ export const navigation = [
     route: '/my_skills',
     to: 'my_skills',
     icon: '',
-    component: MySkills,
+    Component: <MySkills />,
   },
   {
     id: 5,
@@ -44,7 +46,7 @@ export const navigation = [
     route: '/contacts',
     to: 'contacts',
     icon: '',
-    component: Contacts,
+    Component: <Contacts />,
   },
 ];
 
@@ -66,5 +68,23 @@ export const socialObj = [
     name: 'GitHub',
     url: 'https://github.com/Shav-webdev',
     icon: GithubIcon,
+  },
+];
+
+export const langAsSkills = [
+  {
+    title: 'Armenian',
+    percent: 99,
+    level: 'Native',
+  },
+  {
+    title: 'Russian',
+    percent: 80,
+    level: 'B1',
+  },
+  {
+    title: 'English',
+    percent: 80,
+    level: 'B2/B1',
   },
 ];

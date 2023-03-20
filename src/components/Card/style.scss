@@ -40,12 +40,6 @@ $bp-lg: 800px;
   @media (min-width: $bp-md) {
     height: 350px;
   }
-  //@include media('xs') {
-  //  margin-bottom: 20px;
-  //}
-  //@include media('sm') {
-  //
-  //}
 }
 .card-before {
   content: '';

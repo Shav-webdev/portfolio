@@ -6,6 +6,7 @@ import pr3 from 'assets/images/project_3.jpg';
 import pr4 from 'assets/images/project_4.png';
 import pr5 from 'assets/images/dino-img.png';
 import pr6 from 'assets/images/fire-game.png';
+import pr7 from 'assets/images/weather_app.png';
 import Card, { CardProps } from '../../components/Card';
 
 const Projects = () => {
@@ -45,6 +46,12 @@ const Projects = () => {
       name: 'Fire fight',
       url: 'https://shav-webdev.github.io/fire-fight-game-canvas/',
       img: pr6,
+    },
+    {
+      id: 7,
+      name: 'Weather app',
+      url: 'https://shav-webdev.github.io/weather_app/',
+      img: pr7,
     },
   ];
 
