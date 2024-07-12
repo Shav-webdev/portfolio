@@ -68,19 +68,39 @@ const WordsBall = ({ children, ...props }: IWordsBall) => {
   );
 };
 
-function Cloud({ count = 7, radius = 20 }) {
+function Cloud({ count = 6, radius = 20 }) {
   // Create a count x count random words with spherical distribution
   const key = useId();
   const words = useMemo(() => {
     const temp = [];
 
     const skils = [
-      ['MaterialUI', '', '', '', ''],
-      ['Node', 'MongoDB', 'Express', 'JavaScript', 'jQuery'],
-      ['Webpack', 'Docker', 'React', 'Next.js', 'Chart.js'],
-      ['HighCharts.js', 'Git', 'Passport.js', 'OOP', 'LESS'],
-      ['SCSS', 'TypeScript', 'Bootstrap', 'CSS', 'HTML'],
-      ['Redux', 'SASS', 'Figma', 'AntDesign', 'AdobeXD'],
+      ['MaterialUI', '', '', '', '', '', '', ''],
+      ['Node', 'MongoDB', 'Express', 'JavaScript', 'SSR', '', '', ''],
+      ['Webpack', 'Docker', 'React', 'Next.js', 'Chart.js', 'jQuery', '', ''],
+      [
+        'HighCharts.js',
+        'Git',
+        'Passport.js',
+        'OOP',
+        'LESS',
+        'Redux Toolkit',
+        'HTML',
+        'Styled Components',
+      ],
+      [
+        'SCSS',
+        'TypeScript',
+        'Bootstrap',
+        'CSS',
+        'Structured data',
+        'SEO',
+        '',
+        '',
+      ],
+      ['Redux', 'SASS', 'Figma', 'AntDesign', 'AdobeXD', 'ES5', '', ''],
+      ['GA4', 'GTag', 'Context API', 'ES6', 'Server Components', '', '', ''],
+      ['JSON', '', '', '', '', '', '', ''],
     ];
     const spherical = new THREE.Spherical();
     const phiSpan = Math.PI / (count + 1);
@@ -115,7 +135,7 @@ export default function SkillsGlobe() {
       camera={{ position: [0, 0, 65], fov: 90 }}
     >
       <fog attach="fog" args={['#202025', 0, 80]} />
-      <Cloud count={5} radius={45} />
+      <Cloud count={6} radius={45} />
       <TrackballControls
         addEventListener={undefined}
         hasEventListener={undefined}

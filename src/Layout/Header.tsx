@@ -1,6 +1,5 @@
 import { FC } from 'react';
 import './styles.scss';
-import ThemeToggle from '../components/ThemeToggle';
 import Navigation from '../components/Navigation';
 
 const Header: FC = () => {

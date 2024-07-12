@@ -7,6 +7,7 @@ import Section from './Section';
 import { Element } from 'react-scroll';
 import { navigation } from '../helpers/constants';
 import ScrollLine from '../components/ScrollLine';
+import PrimaryContainer from '../components/containers/PrimaryContainer';
 
 interface LayoutProps {
   children?: (props: any) => Element;
@@ -24,7 +25,7 @@ const Layout: FC<LayoutProps> = ({ children }) => {
               const { to, name, Component } = el;
               return (
                 <Element key={name} name={to}>
-                  <Section>{Component}</Section>
+                  <PrimaryContainer>{Component}</PrimaryContainer>
                 </Element>
               );
             })}

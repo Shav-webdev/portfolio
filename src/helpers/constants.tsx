@@ -1,5 +1,6 @@
 import { lazy } from 'react';
 import { FacebookIcon, GithubIcon, LinkedInIcon } from '../assets/icons';
+import Languages from '../pages/Languages';
 
 const Home = lazy(() => import('pages/Home'));
 const About = lazy(() => import('../pages/About'));
@@ -42,6 +43,14 @@ export const navigation = [
   },
   {
     id: 5,
+    name: 'Languages',
+    route: '/languages',
+    to: 'languages',
+    icon: '',
+    Component: <Languages />,
+  },
+  {
+    id: 6,
     name: 'Contacts',
     route: '/contacts',
     to: 'contacts',

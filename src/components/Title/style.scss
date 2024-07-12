@@ -6,14 +6,13 @@
   font-size: 3em;
   line-height: 1;
   text-align: center;
-  padding: 0 20px;
   @include themify($themes) {
     color: themed('titleTextColor');
   }
   @include media('xs') {
-    margin: 15px 0;
+    margin: 0 0 40px;
   }
   @include media('sm') {
-    margin: 15px 0;
+    margin: 0 0 40px;
   }
 }

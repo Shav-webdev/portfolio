@@ -29,17 +29,14 @@ $bp-lg: 800px;
   padding: 1rem;
   width: 100%;
   width: 250px;
+  height: 350px;
   text-align: center;
   color: whitesmoke;
   background-color: whitesmoke;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 2px 2px rgba(0, 0, 0, 0.1),
     0 4px 4px rgba(0, 0, 0, 0.1), 0 8px 8px rgba(0, 0, 0, 0.1),
     0 16px 16px rgba(0, 0, 0, 0.1);
-  margin-bottom: 20px;
-
-  @media (min-width: $bp-md) {
-    height: 350px;
-  }
+  margin-bottom: 40px;
 }
 .card-before {
   content: '';
@@ -89,10 +86,10 @@ $bp-lg: 800px;
   transform: translateY(-50%);
   transition: transform calc(var(--d) * 2) var(--e);
   @include media('xs') {
-    transform: translateY(-20%);
+    transform: translateY(0%);
   }
   @include media('sm') {
-    transform: translateY(-20%);
+    transform: translateY(0%);
   }
 }
 

@@ -1,22 +1,14 @@
-import { useCallback, useState } from 'react';
 import './style.scss';
+import { useContext } from 'react';
+import { UIContext } from '../../contexts/UIContext';
 
 const HamburgerMenu = () => {
-  const [isClosed, setIsClosed] = useState(true);
-
-  const burgerTime = useCallback(() => {
-    if (isClosed) {
-      setIsClosed(false);
-    } else {
-      setIsClosed(true);
-    }
-  }, [isClosed]);
-
+  const { toggleMobileMenu, isMenuClosed } = useContext(UIContext);
   return (
     <div
-      onClick={burgerTime}
+      onClick={() => toggleMobileMenu()}
       id="hamburger"
-      className={`hamburger-menu ${isClosed ? 'is-closed' : 'is-open'}`}
+      className={`hamburger-menu ${isMenuClosed ? 'is-closed' : 'is-open'}`}
     >
       <div className="burger-icon">
         <div className="burger-container">

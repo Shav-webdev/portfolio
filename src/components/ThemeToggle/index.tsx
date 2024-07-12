@@ -10,6 +10,8 @@ const ThemeToggle = () => {
     setTheme(isCurrentDark ? 'light' : 'dark');
     localStorage.setItem('default-theme', isCurrentDark ? 'light' : 'dark');
   };
+
+
   return (
     <div className="toggle-btn-section">
       <div className={`toggle-checkbox m-vertical-auto`}>

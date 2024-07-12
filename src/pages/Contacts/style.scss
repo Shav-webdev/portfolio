@@ -115,6 +115,12 @@
       border-top-left-radius: 255px 15px;
       border-top-right-radius: 15px 225px;
       line-height: 1.2;
+      @include media('xs') {
+        width: 300px;
+      }
+      @include media('sm') {
+        width: 300px;
+      }
     }
     input, textarea {
       font-family: 'special_eliteregular', serif !important;
@@ -125,6 +131,18 @@
 
     }
     & > .form-item-wrapper {
+      &.textarea-wrapper {
+        @include media('xs') {
+          display: flex;
+          justify-content: center;
+          width: 100%;
+        }
+        @include media('sm') {
+          display: flex;
+          justify-content: center;
+          width: 100%;
+        }
+      }
       .form-item {
         min-height: 200px;
       }

@@ -21,12 +21,6 @@ const Card = ({ img, url, name, desc }: CardProps) => {
           View
         </a>
       </div>
-
-      {/*<img src={img} className="card-img-top" alt={name} />*/}
-      {/*<div className="card-body">*/}
-      {/*  <h5 className="card-title dino-game-tr">{name}</h5>*/}
-      {/*  <p className="card-text dino_js-tr">{desc}</p>*/}
-      {/*</div>*/}
     </div>
   );
 };

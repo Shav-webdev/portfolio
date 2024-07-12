@@ -1,14 +1,10 @@
 import React, {
-  RefObject,
-  useCallback,
   useEffect,
   useRef,
-  useState,
 } from 'react';
 import './style.scss';
 import Title from 'components/Title';
 import Button from 'components/Button';
-import emailjs from '@emailjs/browser';
 import { useForm, ValidationError } from '@formspree/react';
 import { socialObj } from 'helpers/constants';
 import { LoaderIcon } from '../../assets/icons';
@@ -61,7 +57,7 @@ const Contacts = () => {
             />
           </span>
         </div>
-        <div className="form-item-wrapper">
+        <div className="form-item-wrapper textarea-wrapper">
           <textarea name="message" className="form-item" />
           <ValidationError
             prefix="Message"
@@ -81,6 +77,7 @@ const Contacts = () => {
         {socialObj.map((obj) => {
           return (
             <a
+              rel="noreferrer"
               key={obj.id}
               className="social-item"
               href={obj.url}
