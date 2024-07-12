@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/898.54af483b.chunk.css","mappings":"AACA,WACE","sources":["pages/About/style.scss"],"sourcesContent":["@import '../../assets/styles/media';\n.about-txt {\n  text-align: center;\n}\n"],"names":[],"sourceRoot":""}

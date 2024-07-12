@@ -133,3 +133,5 @@
  *
  * @license MIT
  */
+
+//! Screen Resize
