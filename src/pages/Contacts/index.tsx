@@ -1,13 +1,16 @@
-import React, {
-  useEffect,
-  useRef,
-} from 'react';
+import React, { useEffect, useRef } from 'react';
 import './style.scss';
 import Title from 'components/Title';
 import Button from 'components/Button';
 import { useForm, ValidationError } from '@formspree/react';
 import { socialObj } from 'helpers/constants';
 import { LoaderIcon } from '../../assets/icons';
+import { Analytics } from '../../libs/GoogleAnalytics';
+import {
+  CONTACT_PAGE_STRUCTURED_DATA,
+  PROFILE_STRUCTURED_DATA,
+} from '../../utils/constants';
+import StructuredData from '../../components/analytics/StructuredData';
 
 const Contacts = () => {
   let formRef: React.MutableRefObject<HTMLFormElement | null> = useRef(null);
@@ -22,6 +25,11 @@ const Contacts = () => {
       }, 1000);
     }
   }, [state.succeeded, state.result]);
+
+  const sendAnalytics = (socialSite: string) => {
+    console.log({ socialSite });
+    Analytics.sendSocialButtonClickEventToGA(socialSite);
+  };
 
   return (
     <div className={'contacts'}>
@@ -77,6 +85,7 @@ const Contacts = () => {
         {socialObj.map((obj) => {
           return (
             <a
+              onClick={() => sendAnalytics(obj.name.toLowerCase())}
               rel="noreferrer"
               key={obj.id}
               className="social-item"
@@ -88,6 +97,7 @@ const Contacts = () => {
           );
         })}
       </div>
+      <StructuredData structuredData={CONTACT_PAGE_STRUCTURED_DATA} />
     </div>
   );
 };
