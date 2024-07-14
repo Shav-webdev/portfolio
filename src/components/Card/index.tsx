@@ -9,7 +9,6 @@ export interface CardProps {
 
 const Card = ({ img, url, name, desc }: CardProps) => {
   const sendCardViewStartEvent = (projectName: string) => {
-    console.log({ projectName });
     Analytics.sendProjectViewStartEventToGA(
       projectName.toLowerCase().replaceAll(' ', '_'),
     );

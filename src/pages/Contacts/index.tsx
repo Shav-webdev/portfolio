@@ -6,10 +6,9 @@ import { useForm, ValidationError } from '@formspree/react';
 import { socialObj } from 'helpers/constants';
 import { LoaderIcon } from '../../assets/icons';
 import { Analytics } from '../../libs/GoogleAnalytics';
-import {
-  CONTACT_PAGE_STRUCTURED_DATA,
-  PROFILE_STRUCTURED_DATA,
-} from '../../utils/constants';
+// import {
+//   CONTACT_PAGE_STRUCTURED_DATA,
+// } from '../../utils/constants';
 import StructuredData from '../../components/analytics/StructuredData';
 
 const Contacts = () => {
@@ -27,7 +26,6 @@ const Contacts = () => {
   }, [state.succeeded, state.result]);
 
   const sendAnalytics = (socialSite: string) => {
-    console.log({ socialSite });
     Analytics.sendSocialButtonClickEventToGA(socialSite);
   };
 
@@ -97,7 +95,7 @@ const Contacts = () => {
           );
         })}
       </div>
-      <StructuredData structuredData={CONTACT_PAGE_STRUCTURED_DATA} />
+      {/*<StructuredData structuredData={CONTACT_PAGE_STRUCTURED_DATA} />*/}
     </div>
   );
 };

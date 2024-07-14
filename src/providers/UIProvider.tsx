@@ -45,7 +45,6 @@ export const UIProvider: React.FC<{ children: React.ReactNode }> = ({
   }, [screenSizes.winWidth]);
 
   const toggleMobileMenu = useCallback(() => {
-    console.log('toggleMobileMenu');
     setIsMenuClosed(!isMenuClosed);
 
     if (isMobileView) {

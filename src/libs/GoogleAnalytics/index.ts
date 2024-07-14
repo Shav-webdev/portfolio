@@ -37,7 +37,6 @@ export class Analytics {
    *
    */
   private static sendPayloadToGA(payload: any): void {
-    console.log('this.GA_MEASUREMENT_ID', this.GA_MEASUREMENT_ID, payload);
     if (!this.GA_MEASUREMENT_ID) {
       console.error(
         'Google Analytics is not initialized. Call init() before sending events.',
