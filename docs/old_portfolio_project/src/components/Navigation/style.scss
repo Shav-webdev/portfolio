@@ -1,0 +1,123 @@
+@import '../../assets/styles/theme-variables';
+@import '../../assets/styles/media';
+
+.nav-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+
+  .nav {
+    flex-grow: 1;
+    .menu {
+      display: flex;
+      justify-content: space-between;
+      list-style: none;
+      width: 100%;
+      padding-right: 40px;
+      .menu-item {
+        margin: 16px;
+        .menu-item-link {
+          font-family: 'special_eliteregular', serif !important;
+          @include themify($themes) {
+            color: themed('navTextColor');
+          }
+          &.active {
+            @include themify($themes) {
+              color: themed('activeNavTextColor');
+            }
+          }
+          &:hover {
+            cursor: pointer;
+          }
+          @include media('xs') {
+            font-size: 20px;
+            line-height: 30px;
+            display: inline-block;
+          }
+          @include media('sm') {
+            font-size: 20px;
+            line-height: 30px;
+            display: inline-block;
+          }
+
+        }
+        @include media('xs') {
+          display: inline-block;
+        }
+        @include media('sm') {
+          display: inline-block;
+        }
+      }
+      @include media('xs') {
+        flex-direction: column;
+        padding: 40px 16px 0;
+      }
+      @include media('sm') {
+        flex-direction: column;
+        padding: 40px 16px 0;
+      }
+    }
+    @include media('xs') {
+      flex-grow: 0;
+    }
+    @include media('sm') {
+      flex-grow: 0;
+    }
+  }
+
+
+  .hamburger-menu {
+    position: relative;
+    z-index: 9;
+    left: 24px;
+    &.is-open {
+      & ~ .nav {
+        top: 60px;
+        display: flex;
+        justify-content: flex-start;
+        @include themify($themes) {
+          background: themed('headerFooterBackground');
+        }
+      }
+    }
+    &.is-closed {
+      & ~ .nav {
+        @include media('xs') {
+          display: none;
+        }
+        @include media('sm') {
+          display: none;
+        }
+      }
+    }
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &.is-closed {
+
+  }
+  &.is-open {
+    @include media('xs') {
+      height: 100dvh;
+    }
+    @include media('sm') {
+      height: 100dvh;
+    }
+  }
+
+  @include media('xs') {
+    justify-content: flex-start;
+    position: relative;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  @include media('sm') {
+    justify-content: flex-start;
+    position: relative;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

@@ -1,0 +1,53 @@
+@import '../../assets/styles/theme-variables';
+
+.btn {
+  align-self: center;
+  background-image: none;
+  background-position: 0 90%;
+  background-repeat: repeat no-repeat;
+  background-size: 4px 3px;
+  border-radius: 15px 225px 255px 15px 15px 255px 225px 15px;
+  border-style: solid;
+  border-width: 2px;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: inline-block;
+  font-family: 'special_eliteregular', serif !important;
+  font-size: 1rem;
+  letter-spacing: 2px;
+  line-height: 23px;
+  outline: none;
+  padding: 0.75rem;
+  text-decoration: none;
+  transition: all 235ms ease-in-out;
+  border-bottom-left-radius: 15px 255px;
+  border-bottom-right-radius: 225px 15px;
+  border-top-left-radius: 255px 15px;
+  border-top-right-radius: 15px 225px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  @include themify($themes) {
+    border-color: themed('btnBorderColor');
+    box-shadow: themed('btnShadow') 15px 28px 25px -18px;
+    color: themed('btnColor');
+    background-color: themed('btnBackgroundColor');
+  }
+  &.primary {
+    background-color: #7AB893;
+  }
+}
+
+.btn:hover {
+  transform: translate3d(0, 2px, 0);
+  @include themify($themes) {
+    box-shadow: themed('btnHoverFocusShadow') 2px 8px 8px -5px;
+  }
+}
+
+.btn:focus {
+  outline: none;
+  @include themify($themes) {
+    box-shadow: themed('btnHoverFocusShadow') 2px 8px 8px -5px;
+  }
+}
