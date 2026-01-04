@@ -1,9 +1,18 @@
+import project1Image from "@/assets/img/project_1.jpg"
+import project2Image from "@/assets/img/project_2.jpg"
+import project3Image from "@/assets/img/project_3.jpg"
+import project4Image from "@/assets/img/project_4.png"
+import dinoImage from "@/assets/img/dino-img.png"
+import fireGameImage from "@/assets/img/fire-game.png"
+import weatherAppImage from "@/assets/img/weather_app.png"
+import type { StaticImageData } from "next/image"
+
 export interface Project {
   id: number
   name: string
   description: string
   longDescription?: string
-  image: string
+  image: string | StaticImageData
   url: string
   github: string
   technologies: string[]
@@ -22,7 +31,7 @@ export const projects: Project[] = [
     name: "Todo List Application",
     description: "A modern, responsive todo list application built with vanilla JavaScript. Features include task creation, editing, deletion, and local storage persistence.",
     longDescription: "This project demonstrates my proficiency in vanilla JavaScript and DOM manipulation. The application features a clean, intuitive interface with full CRUD operations, local storage integration, and responsive design. It showcases my ability to build functional web applications without frameworks while maintaining clean, maintainable code.",
-    image: "/images/projects/project_1.jpg",
+    image: project1Image,
     url: "https://shav-webdev.github.io/to_do_list.github.io",
     github: "https://github.com/Shav-webdev/to_do_list.github.io",
     technologies: ["JavaScript", "HTML5", "CSS3", "Local Storage", "DOM Manipulation"],
@@ -52,7 +61,7 @@ export const projects: Project[] = [
     name: "Interactive Slider Component",
     description: "A custom-built image slider with smooth transitions, touch support, and responsive design. Built with vanilla JavaScript and modern CSS.",
     longDescription: "This slider component showcases my expertise in creating reusable UI components. It features smooth transitions, touch/swipe support for mobile devices, and a responsive design that adapts to different screen sizes. The component is built with performance in mind, using efficient event handling and CSS animations.",
-    image: "/images/projects/project_2.jpg",
+    image: project2Image,
     url: "https://shav-webdev.github.io/slider",
     github: "https://github.com/Shav-webdev/slider",
     technologies: ["JavaScript", "CSS3", "Touch Events", "Responsive Design", "CSS Animations"],
@@ -82,7 +91,7 @@ export const projects: Project[] = [
     name: "Data Table with Sorting",
     description: "A feature-rich data table component with sorting, filtering, and pagination capabilities. Optimized for performance with large datasets.",
     longDescription: "This data table component demonstrates my ability to work with complex data structures and implement efficient algorithms. It features client-side sorting, filtering, and pagination, all optimized for performance with large datasets. The component is built with accessibility in mind, supporting keyboard navigation and screen readers.",
-    image: "/images/projects/project_3.jpg",
+    image: project3Image,
     url: "https://shav-webdev.github.io/dataTable/",
     github: "https://github.com/Shav-webdev/dataTable",
     technologies: ["JavaScript", "DOM Manipulation", "Performance Optimization", "Algorithms", "Accessibility"],
@@ -112,7 +121,7 @@ export const projects: Project[] = [
     name: "React Todo Application",
     description: "A full-featured todo application built with React, featuring state management, component architecture, and modern React patterns.",
     longDescription: "This React application showcases my transition from vanilla JavaScript to modern React development. It demonstrates component architecture, state management, and modern React patterns including hooks and functional components. The application features a clean, modern interface with smooth animations and responsive design.",
-    image: "/images/projects/project_4.png",
+    image: project4Image,
     url: "https://shav-webdev.github.io/react_to_do_app/",
     github: "https://github.com/Shav-webdev/react_to_do_app",
     technologies: ["React", "JavaScript", "Component Architecture", "State Management", "React Hooks"],
@@ -142,7 +151,7 @@ export const projects: Project[] = [
     name: "Dino Game Clone",
     description: "A browser-based game inspired by Chrome's offline dino game. Built with HTML5 Canvas and JavaScript, featuring smooth animations and collision detection.",
     longDescription: "This game project demonstrates my ability to work with HTML5 Canvas and implement game development concepts. It features smooth animations, collision detection, score tracking, and responsive controls. The game showcases my understanding of game loops, physics simulation, and performance optimization for real-time applications.",
-    image: "/images/projects/dino-img.png",
+    image: dinoImage,
     url: "https://shav-webdev.github.io/dino_game/",
     github: "https://github.com/Shav-webdev/dino_game",
     technologies: ["HTML5 Canvas", "JavaScript", "Game Development", "Animation", "Collision Detection"],
@@ -172,7 +181,7 @@ export const projects: Project[] = [
     name: "Fire Fight Game",
     description: "An interactive 2D game built with HTML5 Canvas featuring real-time gameplay, collision detection, and smooth animations.",
     longDescription: "This game project showcases advanced game development techniques including real-time rendering, complex collision detection, and interactive gameplay mechanics. It demonstrates my ability to create engaging user experiences through game design and technical implementation.",
-    image: "/images/projects/fire-game.png",
+    image: fireGameImage,
     url: "https://shav-webdev.github.io/fire-fight-game-canvas/",
     github: "https://github.com/Shav-webdev/fire-fight-game-canvas",
     technologies: ["HTML5 Canvas", "JavaScript", "Game Physics", "Real-time Rendering", "Event Handling"],
@@ -202,7 +211,7 @@ export const projects: Project[] = [
     name: "Weather Application",
     description: "A responsive weather application that fetches real-time weather data from APIs. Features location-based weather information and beautiful UI design.",
     longDescription: "This weather application demonstrates my ability to work with external APIs and create user-friendly interfaces for data visualization. It features location-based weather information, responsive design, and integration with weather APIs. The application showcases my skills in API integration, data handling, and creating intuitive user experiences.",
-    image: "/images/projects/weather_app.png",
+    image: weatherAppImage,
     url: "https://shav-webdev.github.io/weather_app/",
     github: "https://github.com/Shav-webdev/weather_app",
     technologies: ["API Integration", "JavaScript", "Responsive Design", "Weather APIs", "Data Visualization"],

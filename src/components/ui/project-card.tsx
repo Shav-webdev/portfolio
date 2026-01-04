@@ -4,13 +4,14 @@ import { motion } from "framer-motion"
 import { Button } from "./button"
 import { ExternalLink, Github } from "lucide-react"
 import Image from "next/image"
+import type { StaticImageData } from "next/image"
 
 interface ProjectCardProps {
   project: {
     id: number
     name: string
     description: string
-    image: string
+    image: string | StaticImageData
     url: string
     github: string
     technologies: string[]

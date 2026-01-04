@@ -4,6 +4,7 @@ import { Modal } from "./modal"
 import { Button } from "./button"
 import { ExternalLink, Github } from "lucide-react"
 import Image from "next/image"
+import type { StaticImageData } from "next/image"
 
 interface ProjectModalProps {
   project: {
@@ -11,7 +12,7 @@ interface ProjectModalProps {
     name: string
     description: string
     longDescription?: string
-    image: string
+    image: string | StaticImageData
     url: string
     github: string
     technologies: string[]
