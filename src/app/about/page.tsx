@@ -47,19 +47,22 @@ export default function About() {
               </h2>
               <div className="space-y-4 text-muted-foreground">
                 <p>
-                  I&apos;m a passionate full-stack developer with over 6 years of experience 
-                  building modern web applications. My journey began in 2019 as an intern 
-                  at Esterox, where I discovered my love for web development.
+                  I&apos;m a Frontend Engineer with nearly 7 years of experience building 
+                  scalable, high-quality web applications using modern technologies such as 
+                  React, Next.js, TypeScript, and Node.js. I specialize in creating performant, 
+                  user-focused interfaces and enjoy working on complex products at scale.
                 </p>
                 <p>
-                  Over the years, I&apos;ve had the privilege of working with international 
-                  companies including Menu Group UK and Docus.ai, where I&apos;ve honed my 
-                  skills in React, Next.js, and modern JavaScript frameworks.
+                  My professional background includes extensive experience with modern frontend 
+                  architecture, state management (Redux, Zustand, TanStack Query), and UI systems 
+                  such as Tailwind CSS, Radix UI, and shadcn/ui. I have also worked closely with 
+                  backend services and CI/CD pipelines, and have hands-on experience monitoring 
+                  production systems using tools like Grafana, ArgoCD, and Kargo.
                 </p>
                 <p>
-                  Currently, I&apos;m a Software Development Engineer at XData, where I focus 
-                  on building responsive UI pages and improving application performance 
-                  using cutting-edge technologies like Docker, ArgoCD, and Grafana.
+                  I value clean, maintainable code, strong collaboration, and continuous improvement. 
+                  I take ownership of features from idea to production and consistently focus on 
+                  performance, reliability, and user experience.
                 </p>
               </div>
             </motion.div>

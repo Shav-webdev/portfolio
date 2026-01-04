@@ -32,17 +32,17 @@ export function ExperienceTimeline({ experiences }: ExperienceTimelineProps) {
             <div className="flex-1 bg-background rounded-lg border border-border p-6 shadow-sm hover:shadow-md transition-shadow">
               <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between mb-4">
                 <div>
-                  <div className="flex items-center space-x-2 mb-1">
+                  <div className="flex items-top sm:items-center  space-x-2 mb-1">
                     <h3 className="text-xl font-semibold text-foreground">
                       {experience.position}
                     </h3>
                     {experience.isCurrent && (
-                      <Badge variant="default" className="text-xs">
+                      <Badge variant="default" className="text-xs h-fit">
                         Current
                       </Badge>
                     )}
                   </div>
-                  <div className="flex items-center space-x-4 text-muted-foreground mb-2">
+                  <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 text-muted-foreground mb-2">
                     <div className="flex items-center space-x-1">
                       <Building2 className="w-4 h-4" />
                       <span className="font-medium text-foreground">{experience.company}</span>
@@ -52,7 +52,7 @@ export function ExperienceTimeline({ experiences }: ExperienceTimelineProps) {
                       <span>{experience.location}</span>
                     </div>
                   </div>
-                  <div className="flex items-center space-x-4 text-sm text-muted-foreground">
+                  <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 text-sm text-muted-foreground">
                     <div className="flex items-center space-x-1">
                       <Calendar className="w-4 h-4" />
                       <span>{experience.duration}</span>

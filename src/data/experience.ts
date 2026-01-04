@@ -44,7 +44,13 @@ export const workExperience: WorkExperience[] = [
       'Improved application performance by 40% through SSR implementation',
       'Reduced deployment time by 60% using ArgoCD automation',
       'Enhanced SEO scores by implementing structured data and meta optimization',
-      'Established monitoring dashboard using Grafana for better observability'
+      'Established monitoring dashboard using Grafana for better observability',
+      'Implemented Payments Frontend module for the marketplace',
+      'Participated in and managed code freezing processes for stable releases',
+      'Led release preparation activities including version planning and coordination',
+      'Conducted production testing to ensure system reliability and performance',
+      'Implemented system monitoring with Sentry and Grafana for real-time error tracking and observability',
+      'Managed deployments using Kargo and ArgoCD for automated CI/CD pipelines'
     ],
     technologies: [
       'React.js', 'Next.js (app router)', 'SSR', 'TypeScript', 'Tailwind', 'ChakraUI', 'Radix UI', 'shadcn/ui', 'framer motion', 'GSAP', 
@@ -61,7 +67,7 @@ export const workExperience: WorkExperience[] = [
     startDate: '2022-11',
     endDate: '2024-08',
     isCurrent: false,
-    location: 'Remote',
+    location: 'Onsite',
     description: 'Developed responsive web applications and maintained existing software solutions with focus on PWA performance.',
     responsibilities: [
       'Building responsive UI pages using Next.js and Styled Components',
@@ -70,10 +76,12 @@ export const workExperience: WorkExperience[] = [
       'Keeping application packages up to date'
     ],
     achievements: [
-      'Implemented PWA features increasing user engagement by 35%',
       'Optimized bundle size by 25% through code splitting and lazy loading',
-      'Improved Core Web Vitals scores to meet Google standards',
-      'Reduced loading time by 30% through performance optimization'
+      'Add structured data to the website for better SEO',
+      'Add GA4 to the website for better analytics',
+      'Reduced loading time by 30% through performance optimization',
+      'Update Next.js pages router to app router',
+      'Implemented UI design system using Antd Design Components'
     ],
     technologies: [
       'React.js', 'Next.js (app/pages)', 'TypeScript', 'Styled Components', 'Tailwind', 
@@ -118,7 +126,7 @@ export const workExperience: WorkExperience[] = [
     startDate: '2021-01',
     endDate: '2021-08',
     isCurrent: false,
-    location: 'Remote',
+    location: 'Onsite',
     description: 'Developed web applications and maintained existing software solutions.',
     responsibilities: [
       'Making web applications and providing support',
@@ -126,9 +134,10 @@ export const workExperience: WorkExperience[] = [
       'Developing new user-facing features and maintaining existing web-based software applications'
     ],
     achievements: [
-      'Built 10+ reusable React components using Ant Design',
+      'Redesigned the entire frontend application in a short timeframe, enabling successful launch in the American market',
+      'Received Certificate of Appreciation from client for outstanding contribution to application introduction in America',
+      'Built 20+ reusable React components using Ant Design',
       'Improved application performance by 20% through optimization',
-      'Implemented responsive design patterns across multiple projects',
       'Established coding standards and best practices for the team'
     ],
     technologies: [
@@ -146,13 +155,16 @@ export const workExperience: WorkExperience[] = [
     startDate: '2019-03',
     endDate: '2021-05',
     isCurrent: false,
-    location: 'Remote',
+    location: 'Hybrid',
     description: 'Developed full-stack web applications using MERN stack technologies.',
     responsibilities: [
       'Adding new functionalities and features',
       'Developing new user-facing features and maintaining existing web-based software applications'
     ],
     achievements: [
+      'Mentored 2 junior developers in React and Redux, improving team productivity and code quality',
+      'Managed project release process to Digital Ocean, ensuring smooth deployments',
+      'Implemented PM2 service for process management and application monitoring',
       'Built complete MERN stack applications from database to frontend',
       'Implemented user authentication and authorization systems',
       'Created responsive dashboards with data visualization',
@@ -160,7 +172,8 @@ export const workExperience: WorkExperience[] = [
     ],
     technologies: [
       'React', 'Redux (Thunk)', 'React Bootstrap', 'HighCharts', 
-      'AntDesign', 'Node.js', 'Express', 'MongoDB', 'Passport.js'
+      'AntDesign', 'Node.js', 'Express', 'MongoDB', 'Passport.js',
+      'Nginx', 'PM2', 'Digital Ocean'
     ],
     teamSize: '2-4 developers',
     industry: 'Software Development'
@@ -187,7 +200,7 @@ export const careerHighlights: CareerHighlight[] = [
   {
     id: 'mentoring-juniors',
     title: 'Junior Developer Mentoring',
-    description: 'Mentored 2 junior developers on React best practices and TypeScript',
+    description: 'Mentored 2 junior developers on React best practices and Redux(Saga)',
     year: '2020',
     category: 'leadership',
     impact: 'Improved team productivity and code quality standards'
@@ -211,7 +224,7 @@ export const careerHighlights: CareerHighlight[] = [
 ]
 
 export const careerStats = {
-  totalExperience: 'nearly 7 years',
+  totalExperience: '~ 7',
   companiesWorked: '5',
   projectsDelivered: '12+',
   technologiesMastered: '20+',
