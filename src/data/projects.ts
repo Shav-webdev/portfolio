@@ -5,6 +5,7 @@ import project4Image from "@/assets/img/project_4.png"
 import dinoImage from "@/assets/img/dino-img.png"
 import fireGameImage from "@/assets/img/fire-game.png"
 import weatherAppImage from "@/assets/img/weather_app.png"
+import videoPlayerImage from "@/assets/img/video-player.png"
 import type { StaticImageData } from "next/image"
 
 export interface Project {
@@ -31,7 +32,7 @@ export const projects: Project[] = [
     name: "Custom Video Player",
     description: "A modern video player application built with Next.js and React. Features custom video playback controls, resolution selection, chapter markers, and fullscreen support - all built from scratch without using video player libraries.",
     longDescription: "This video player project demonstrates my ability to build complex, feature-rich media applications from scratch. Built with Next.js 16, React 19, and HLS.js, the player features a custom-designed UI with full playback controls, resolution switching, chapter navigation, and fullscreen capabilities. The entire player interface and control logic was implemented without relying on existing video player packages, showcasing deep understanding of HTML5 video APIs and modern React patterns.",
-    image: weatherAppImage,
+    image: videoPlayerImage,
     url: "https://video-player-ivory-zeta.vercel.app/",
     github: "https://github.com/Shav-webdev/video-player",
     technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS", "HLS.js", "HTML5 Video API"],
