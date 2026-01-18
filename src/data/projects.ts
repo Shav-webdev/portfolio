@@ -27,6 +27,39 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    id: 8,
+    name: "Custom Video Player",
+    description: "A modern video player application built with Next.js and React. Features custom video playback controls, resolution selection, chapter markers, and fullscreen support - all built from scratch without using video player libraries.",
+    longDescription: "This video player project demonstrates my ability to build complex, feature-rich media applications from scratch. Built with Next.js 16, React 19, and HLS.js, the player features a custom-designed UI with full playback controls, resolution switching, chapter navigation, and fullscreen capabilities. The entire player interface and control logic was implemented without relying on existing video player packages, showcasing deep understanding of HTML5 video APIs and modern React patterns.",
+    image: weatherAppImage,
+    url: "https://video-player-ivory-zeta.vercel.app/",
+    github: "https://github.com/Shav-webdev/video-player",
+    technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS", "HLS.js", "HTML5 Video API"],
+    category: "React Application",
+    featured: true,
+    year: "2024",
+    status: "completed",
+    highlights: [
+      "Custom-built video player UI from scratch",
+      "Resolution selection and quality switching",
+      "Chapter markers and navigation",
+      "Fullscreen support",
+      "Modern React 19 and Next.js 16 implementation"
+    ],
+    challenges: [
+      "Implementing custom video controls without libraries",
+      "HLS.js integration for adaptive streaming",
+      "Building responsive video player interface",
+      "Managing video state and playback synchronization"
+    ],
+    results: [
+      "Fully functional custom video player",
+      "Zero dependency on video player libraries",
+      "Production-ready deployment on Vercel",
+      "Clean, maintainable codebase with TypeScript"
+    ]
+  },
+  {
     id: 1,
     name: "Todo List Application",
     description: "A modern, responsive todo list application built with vanilla JavaScript. Features include task creation, editing, deletion, and local storage persistence.",
