@@ -23,7 +23,7 @@ const GoogleAnalytics = () => {
     }, 2500)
   }, [])
 
-  if (typeof window === "undefined" || !GA_MEASUREMENT_ID) {
+  if (!GA_MEASUREMENT_ID) {
     return null
   }
 
