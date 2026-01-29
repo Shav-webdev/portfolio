@@ -1,9 +1,11 @@
 import type { Metadata, Viewport } from "next";
+import Script from "next/script";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/providers/theme-provider";
 import { StructuredData, getProfilePageSchema } from "@/features/StructuredData";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
+import { GA_MEASUREMENT_ID } from "@/lib/GoogleAnalytics";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -53,6 +55,11 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+         {GA_MEASUREMENT_ID && (
+          <Script id="ga-init" strategy="beforeInteractive">
+            {`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}window.gtag=gtag;gtag('js',new Date());gtag('config','${GA_MEASUREMENT_ID}');`}
+          </Script>
+        )}
         <GoogleAnalytics />
         <StructuredData data={getProfilePageSchema()} id="ProfilePage" />
         <ThemeProvider

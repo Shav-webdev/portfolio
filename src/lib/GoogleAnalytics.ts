@@ -83,6 +83,23 @@ export class Analytics {
     this.sendPayloadToGA(['user_init', { ...payload, user_id: userId }]);
   }
 
+  /** Send page_view on client-side route change (SPA navigation)
+   *
+   * @param pagePath – full path including basePath (e.g. /portfolio/about)
+   * @param pageTitle – optional; defaults to document.title
+   */
+  static sendPageView(pagePath: string, pageTitle?: string): void {
+    if (typeof window === 'undefined' || !this.GA_MEASUREMENT_ID) return;
+    if (!window.gtag) return;
+    const title = pageTitle ?? (typeof document !== 'undefined' ? document.title : undefined);
+    const location = typeof window !== 'undefined' ? `${window.location.origin}${pagePath}` : undefined;
+    window.gtag('event', 'page_view', {
+      page_path: pagePath,
+      page_title: title,
+      page_location: location,
+    });
+  }
+
   /** Add UserId to dataLayer
    *
    * @param userId
