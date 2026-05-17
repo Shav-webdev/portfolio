@@ -29,7 +29,14 @@ export function ExperienceTimeline({ experiences }: ExperienceTimelineProps) {
             </div>
 
             {/* Content */}
-            <div className="flex-1 bg-background rounded-lg border border-border p-6 shadow-sm hover:shadow-md transition-shadow">
+            <motion.div
+              whileHover={{ y: -2, transition: { type: "spring", stiffness: 300, damping: 20 } }}
+              className="relative flex-1 bg-background rounded-lg border border-border p-6 overflow-hidden group"
+            >
+              <div
+                className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
+                style={{ background: "linear-gradient(90deg, var(--primary), transparent 40%)", mixBlendMode: "overlay" }}
+              />
               <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between mb-4">
                 <div>
                   <div className="flex items-top sm:items-center  space-x-2 mb-1">
@@ -113,7 +120,7 @@ export function ExperienceTimeline({ experiences }: ExperienceTimelineProps) {
                   ))}
                 </div>
               </div>
-            </div>
+            </motion.div>
           </motion.div>
         ))}
       </div>

@@ -1,8 +1,25 @@
+import type { StaticImageData } from "next/image"
+import certAnthropicImg from "@/assets/img/certificates/cert-anthropic.png"
+import certBewebImg from "@/assets/img/certificates/cert-beeweb.jpg"
+import certSimplyImg from "@/assets/img/certificates/cert-simply-technologies.jpg"
+import certAcaImg from "@/assets/img/certificates/cert-aca.jpg"
+
 export interface Skill {
   name: string
   category: string
   proficiency: "Expert" | "Advanced" | "Proficient" | "Intermediate"
   years?: number
+}
+
+export interface Certification {
+  name: string
+  issuer: string
+  issuerColor: string
+  date: string
+  description: string
+  url?: string
+  image?: StaticImageData
+  badge?: string
 }
 
 export interface SkillCategory {
@@ -42,6 +59,7 @@ export const skillCategories: SkillCategory[] = [
       { name: "Node.js", category: "Back-End Technologies", proficiency: "Advanced", years: 2 },
       { name: "Nest.js", category: "Back-End Technologies", proficiency: "Advanced", years: 2 },
       { name: "Express.js", category: "Back-End Technologies", proficiency: "Advanced", years: 2 },
+      { name: "Python", category: "Back-End Technologies", proficiency: "Proficient", years: 1 },
       { name: "MongoDB", category: "Back-End Technologies", proficiency: "Advanced", years: 2 },
       { name: "PostgreSQL", category: "Back-End Technologies", proficiency: "Proficient", years: 2 },
     ],
@@ -68,6 +86,7 @@ export const skillCategories: SkillCategory[] = [
   {
     name: "AI Tools",
     skills: [
+      { name: "Claude AI (Anthropic)", category: "AI Tools", proficiency: "Expert" },
       { name: "ChatGPT", category: "AI Tools", proficiency: "Expert" },
       { name: "DeepSeek", category: "AI Tools", proficiency: "Expert" },
       { name: "GitHub Copilot", category: "AI Tools", proficiency: "Expert" },
@@ -100,6 +119,50 @@ export const skillCategories: SkillCategory[] = [
       { name: "Russian", category: "Languages", proficiency: "Expert" },
       { name: "English", category: "Languages", proficiency: "Advanced" },
     ],
+  },
+]
+
+export const certifications: Certification[] = [
+  {
+    name: "Claude 101",
+    issuer: "Anthropic",
+    issuerColor: "#D97706",
+    date: "May 14, 2026",
+    description:
+      "Certificate of Completion for Claude 101 — covering Claude AI model capabilities, prompt engineering, and building AI-powered applications with the Anthropic API.",
+    url: "https://verify.skilljar.com/c/er76jev5ghpr",
+    image: certAnthropicImg,
+    badge: "🤖",
+  },
+  {
+    name: "Certificate of Appreciation",
+    issuer: "BeeWeb",
+    issuerColor: "#F59E0B",
+    date: "2021",
+    description:
+      "Awarded for outstanding teamwork and exceptional contribution to the successful launch of an application in the American market.",
+    image: certBewebImg,
+    badge: "🏆",
+  },
+  {
+    name: "Certificate of Completion",
+    issuer: "Simply Technologies",
+    issuerColor: "#10B981",
+    date: "March 13, 2020",
+    description:
+      "Awarded for successful completion of the internship program and active participation in the development of the \"Deliver.me\" application. Technologies learned: JavaScript, Node.js, MongoDB, React.js, Redux, Git.",
+    image: certSimplyImg,
+    badge: "🎓",
+  },
+  {
+    name: "JavaScript Development",
+    issuer: "Armenian Code Academy (ACA)",
+    issuerColor: "#6366F1",
+    date: "December 1, 2019",
+    description:
+      "Successfully completed a 4-month JavaScript Development course offered by Armenian Code Academy, covering core JS concepts, DOM manipulation, and modern development practices.",
+    image: certAcaImg,
+    badge: "📜",
   },
 ]
 

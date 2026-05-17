@@ -1,4 +1,11 @@
+import type { Metadata } from "next"
 import { Navigation } from "@/components/navigation"
+
+export const metadata: Metadata = {
+  title: "Experience — Shavarsh Abrahamyan",
+  description:
+    "7+ years of professional experience across international companies. Full-stack engineer specialising in React, Next.js, TypeScript, and cloud technologies.",
+}
 import { ExperienceHero } from "@/features/ExperienceHero"
 import { ExperienceCareerStats } from "@/features/ExperienceCareerStats"
 import { ExperienceTimelineSection } from "@/features/ExperienceTimeline"

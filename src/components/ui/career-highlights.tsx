@@ -57,8 +57,13 @@ export function CareerHighlights({ highlights }: CareerHighlightsProps) {
         <motion.div
           key={highlight.id}
           variants={staggerItem}
-          className="bg-background rounded-lg border border-border p-6 hover:shadow-md transition-shadow"
+          whileHover={{ y: -4, transition: { type: "spring", stiffness: 300, damping: 20 } }}
+          className="relative bg-background rounded-lg border border-border p-6 overflow-hidden group"
         >
+          <div
+            className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
+            style={{ background: "linear-gradient(135deg, var(--primary), transparent 65%)", mixBlendMode: "overlay" }}
+          />
           <div className="flex items-start justify-between mb-4">
             <div className={`p-2 rounded-lg ${getCategoryColor(highlight.category)}`}>
               {getCategoryIcon(highlight.category)}

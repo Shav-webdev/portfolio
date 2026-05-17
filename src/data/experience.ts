@@ -219,12 +219,12 @@ export const careerHighlights: CareerHighlight[] = [
     description: 'Started professional development career at Esterox and Simply Technologies as an intern',
     year: '2019',
     category: 'achievement',
-    impact: 'Laid foundation for nearly 7 years of continuous growth in web development'
+    impact: 'Laid foundation for 7+ years of continuous growth in web development'
   }
 ]
 
 export const careerStats = {
-  totalExperience: '~ 7',
+  totalExperience: '7+',
   companiesWorked: '5',
   projectsDelivered: '12+',
   technologiesMastered: '20+',

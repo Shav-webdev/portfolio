@@ -26,7 +26,7 @@ export const contactInfo: ContactInfo = {
   phone: "+374 55-88-62-11",
   location: "Yerevan, Armenia",
   address: "Yerkatgits 6 apt. 2, Yerevan, Armenia",
-  linkedin: "https://www.linkedin.com/in/shavarsh-abrahamyan-42065816a/",
+  linkedin: "https://www.linkedin.com/in/shavarsh-abrahamyan/",
   github: "https://github.com/Shav-webdev",
   portfolio: "https://shav-webdev.github.io/portfolio/",
 }

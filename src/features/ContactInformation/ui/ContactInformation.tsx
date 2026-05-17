@@ -38,9 +38,14 @@ export function ContactInformation() {
         <motion.a
           variants={staggerItem}
           href={`mailto:${contactInfo.email}`}
-          className="flex items-center gap-4 p-4 bg-background rounded-lg border border-border hover:shadow-lg transition-shadow group"
+          whileHover={{ x: 4, transition: { type: "spring", stiffness: 300, damping: 20 } }}
+          className="relative flex items-center gap-4 p-4 bg-background rounded-lg border border-border overflow-hidden group"
         >
-          <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+          <div
+            className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-400 pointer-events-none"
+            style={{ background: "linear-gradient(90deg, var(--primary), transparent 50%)", mixBlendMode: "overlay" }}
+          />
+          <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
             <Mail className="w-6 h-6 text-primary" />
           </div>
           <div>
@@ -54,9 +59,14 @@ export function ContactInformation() {
         <motion.a
           variants={staggerItem}
           href={`tel:${contactInfo.phone.replace(/\s/g, "")}`}
-          className="flex items-center gap-4 p-4 bg-background rounded-lg border border-border hover:shadow-lg  transition-shadow group"
+          whileHover={{ x: 4, transition: { type: "spring", stiffness: 300, damping: 20 } }}
+          className="relative flex items-center gap-4 p-4 bg-background rounded-lg border border-border overflow-hidden group"
         >
-          <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+          <div
+            className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-400 pointer-events-none"
+            style={{ background: "linear-gradient(90deg, var(--secondary), transparent 50%)", mixBlendMode: "overlay" }}
+          />
+          <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
             <Phone className="w-6 h-6 text-primary" />
           </div>
           <div>
@@ -69,8 +79,12 @@ export function ContactInformation() {
 
         <motion.div
           variants={staggerItem}
-          className="flex items-center gap-4 p-4 bg-background rounded-lg border border-border"
+          className="relative flex items-center gap-4 p-4 bg-background rounded-lg border border-border overflow-hidden group"
         >
+          <div
+            className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-400 pointer-events-none"
+            style={{ background: "linear-gradient(90deg, var(--accent), transparent 50%)", mixBlendMode: "overlay" }}
+          />
           <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
             <MapPin className="w-6 h-6 text-primary" />
           </div>

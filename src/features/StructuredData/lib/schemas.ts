@@ -13,7 +13,7 @@ const PERSON_NAME = "Shavarsh Abrahamyan"
 const PERSON_ALTERNATE_NAME = "shavabraham"
 const PERSON_IDENTIFIER = "123456sh"
 const PERSON_DESCRIPTION =
-  "With nearly 7 years of comprehensive experience in web development, I specialize in building dynamic and scalable web applications using a variety of modern technologies. I am dedicated to crafting high-quality code and delivering exceptional user experiences. My passion for continuous learning and staying abreast of the latest industry trends and technologies positions me well to contribute to diverse and challenging projects."
+  "With 7+ years of comprehensive experience in web development, I specialize in building dynamic and scalable web applications using a variety of modern technologies. I am dedicated to crafting high-quality code and delivering exceptional user experiences. My passion for continuous learning and staying abreast of the latest industry trends and technologies positions me well to contribute to diverse and challenging projects."
 
 /**
  * Parse address into structured components

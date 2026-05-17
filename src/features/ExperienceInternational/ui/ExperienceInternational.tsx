@@ -20,8 +20,13 @@ export function ExperienceInternational() {
       >
         <motion.div
           variants={fadeInUp}
-          className="bg-background rounded-lg border border-border p-6"
+          whileHover={{ y: -4, transition: { type: "spring", stiffness: 300, damping: 20 } }}
+          className="relative bg-background rounded-lg border border-border p-6 overflow-hidden group"
         >
+          <div
+            className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
+            style={{ background: "linear-gradient(135deg, var(--primary), transparent 65%)", mixBlendMode: "overlay" }}
+          />
           <div className="flex items-center space-x-3 mb-4">
             <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
               <span className="text-blue-600 font-bold text-lg">🇪🇪</span>
@@ -57,8 +62,13 @@ export function ExperienceInternational() {
 
         <motion.div
           variants={fadeInUp}
-          className="bg-background rounded-lg border border-border p-6"
+          whileHover={{ y: -4, transition: { type: "spring", stiffness: 300, damping: 20 } }}
+          className="relative bg-background rounded-lg border border-border p-6 overflow-hidden group"
         >
+          <div
+            className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
+            style={{ background: "linear-gradient(135deg, var(--secondary), transparent 65%)", mixBlendMode: "overlay" }}
+          />
           <div className="flex items-center space-x-3 mb-4">
             <div className="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center">
               <span className="text-purple-600 font-bold text-lg">🌍</span>
@@ -94,8 +104,13 @@ export function ExperienceInternational() {
 
         <motion.div
           variants={fadeInUp}
-          className="bg-background rounded-lg border border-border p-6"
+          whileHover={{ y: -4, transition: { type: "spring", stiffness: 300, damping: 20 } }}
+          className="relative bg-background rounded-lg border border-border p-6 overflow-hidden group"
         >
+          <div
+            className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
+            style={{ background: "linear-gradient(135deg, var(--accent), transparent 65%)", mixBlendMode: "overlay" }}
+          />
           <div className="flex items-center space-x-3 mb-4">
             <div className="w-10 h-10 bg-yellow-100 rounded-lg flex items-center justify-center">
               <span className="text-yellow-600 font-bold text-lg">🇮🇱</span>

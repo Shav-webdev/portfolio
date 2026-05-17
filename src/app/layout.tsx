@@ -3,6 +3,7 @@ import Script from "next/script";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/providers/theme-provider";
+import { CustomCursor } from "@/components/ui/custom-cursor";
 import { StructuredData, getProfilePageSchema } from "@/features/StructuredData";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
 import { GA_MEASUREMENT_ID } from "@/lib/GoogleAnalytics";
@@ -52,6 +53,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <meta name="description" content="Full-stack developer portfolio of Shavarsh Abrahamyan — Senior Software Engineer with 7+ years of experience in React, Next.js, and TypeScript." />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
@@ -62,6 +66,7 @@ export default function RootLayout({
         )}
         <GoogleAnalytics />
         <StructuredData data={getProfilePageSchema()} id="ProfilePage" />
+        <CustomCursor />
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

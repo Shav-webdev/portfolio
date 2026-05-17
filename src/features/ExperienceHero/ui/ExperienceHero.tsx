@@ -26,7 +26,7 @@ export function ExperienceHero() {
           variants={fadeInUp}
           className="text-xl text-muted-foreground mb-8"
         >
-          Nearly 7 years of growth from intern to senior software engineer
+          7+ years of growth from intern to senior software engineer
         </motion.p>
         <motion.div
           variants={fadeInUp}

@@ -1,0 +1,137 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-label="Job Hunt Copilot cover">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="55%" stop-color="#1e1b4b"/>
+      <stop offset="100%" stop-color="#312e81"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#a78bfa"/>
+      <stop offset="100%" stop-color="#38bdf8"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#8b5cf6" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#8b5cf6" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#ffffff" stroke-opacity="0.05" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="800" fill="url(#bg)"/>
+  <rect width="1200" height="800" fill="url(#grid)"/>
+  <circle cx="950" cy="180" r="380" fill="url(#glow)"/>
+  <circle cx="220" cy="640" r="320" fill="url(#glow)" opacity="0.6"/>
+
+  <!-- Tag -->
+  <g transform="translate(80, 100)">
+    <rect width="170" height="36" rx="18" fill="#ffffff" fill-opacity="0.08" stroke="#ffffff" stroke-opacity="0.15"/>
+    <circle cx="22" cy="18" r="5" fill="#22c55e"/>
+    <text x="40" y="23" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="#e2e8f0" font-weight="500">FULL-STACK · AI</text>
+  </g>
+
+  <!-- Title -->
+  <text x="80" y="280" font-family="system-ui, -apple-system, sans-serif" font-size="84" font-weight="800" fill="#f8fafc">Job Hunt</text>
+  <text x="80" y="380" font-family="system-ui, -apple-system, sans-serif" font-size="84" font-weight="800" fill="url(#accent)">Copilot</text>
+
+  <!-- Subtitle -->
+  <text x="80" y="440" font-family="system-ui, -apple-system, sans-serif" font-size="22" fill="#cbd5e1" font-weight="400">
+    An AI agent that searches jobs, scores them against
+  </text>
+  <text x="80" y="472" font-family="system-ui, -apple-system, sans-serif" font-size="22" fill="#cbd5e1" font-weight="400">
+    your CV, and drafts cover letters — end-to-end.
+  </text>
+
+  <!-- Tech chips -->
+  <g transform="translate(80, 540)" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="500" fill="#e2e8f0">
+    <g>
+      <rect width="100" height="32" rx="16" fill="#ffffff" fill-opacity="0.08" stroke="#ffffff" stroke-opacity="0.18"/>
+      <text x="50" y="21" text-anchor="middle">Next.js</text>
+    </g>
+    <g transform="translate(112, 0)">
+      <rect width="100" height="32" rx="16" fill="#ffffff" fill-opacity="0.08" stroke="#ffffff" stroke-opacity="0.18"/>
+      <text x="50" y="21" text-anchor="middle">NestJS</text>
+    </g>
+    <g transform="translate(224, 0)">
+      <rect width="120" height="32" rx="16" fill="#ffffff" fill-opacity="0.08" stroke="#ffffff" stroke-opacity="0.18"/>
+      <text x="60" y="21" text-anchor="middle">LangGraph</text>
+    </g>
+    <g transform="translate(356, 0)">
+      <rect width="110" height="32" rx="16" fill="#ffffff" fill-opacity="0.08" stroke="#ffffff" stroke-opacity="0.18"/>
+      <text x="55" y="21" text-anchor="middle">FastAPI</text>
+    </g>
+    <g transform="translate(478, 0)">
+      <rect width="100" height="32" rx="16" fill="#ffffff" fill-opacity="0.08" stroke="#ffffff" stroke-opacity="0.18"/>
+      <text x="50" y="21" text-anchor="middle">Gemini</text>
+    </g>
+    <g transform="translate(590, 0)">
+      <rect width="120" height="32" rx="16" fill="#ffffff" fill-opacity="0.08" stroke="#ffffff" stroke-opacity="0.18"/>
+      <text x="60" y="21" text-anchor="middle">Postgres</text>
+    </g>
+    <g transform="translate(722, 0)">
+      <rect width="110" height="32" rx="16" fill="#ffffff" fill-opacity="0.08" stroke="#ffffff" stroke-opacity="0.18"/>
+      <text x="55" y="21" text-anchor="middle">Helm/k3d</text>
+    </g>
+  </g>
+
+  <!-- Mock UI panel right -->
+  <g transform="translate(720, 120)">
+    <rect width="420" height="560" rx="18" fill="#0b1224" stroke="#ffffff" stroke-opacity="0.12"/>
+    <!-- traffic lights -->
+    <circle cx="22" cy="22" r="6" fill="#ef4444"/>
+    <circle cx="42" cy="22" r="6" fill="#f59e0b"/>
+    <circle cx="62" cy="22" r="6" fill="#22c55e"/>
+    <!-- prompt bar -->
+    <rect x="20" y="50" width="380" height="40" rx="10" fill="#1e293b" stroke="#ffffff" stroke-opacity="0.08"/>
+    <text x="34" y="76" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#94a3b8">Find 5 remote Python jobs and score them…</text>
+    <rect x="318" y="58" width="72" height="24" rx="6" fill="#a78bfa"/>
+    <text x="354" y="74" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#0f172a">Run</text>
+
+    <!-- event log -->
+    <g font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#cbd5e1">
+      <g transform="translate(20, 120)">
+        <text x="0" y="0">🚀</text>
+        <text x="22" y="0" fill="#94a3b8">Starting: find 5 remote Python jobs…</text>
+      </g>
+      <g transform="translate(20, 154)">
+        <text x="0" y="0">⚙️</text>
+        <text x="22" y="0" fill="#38bdf8">→ get_my_cv</text>
+      </g>
+      <g transform="translate(20, 180)">
+        <text x="22" y="0" fill="#22c55e">✓ get_my_cv</text>
+      </g>
+      <g transform="translate(20, 214)">
+        <text x="0" y="0">⚙️</text>
+        <text x="22" y="0" fill="#38bdf8">→ search_jobs(query="python remote")</text>
+      </g>
+      <g transform="translate(20, 240)">
+        <text x="22" y="0" fill="#22c55e">✓ search_jobs · 5 results</text>
+      </g>
+      <!-- result card -->
+      <g transform="translate(40, 260)">
+        <rect width="360" height="56" rx="8" fill="#111827"/>
+        <text x="14" y="22" font-size="13" font-weight="600" fill="#f1f5f9">Senior Python Engineer — Acme</text>
+        <text x="14" y="42" font-size="11" fill="#94a3b8">Score 0.87 · remote · python, fastapi, llm</text>
+      </g>
+      <g transform="translate(40, 326)">
+        <rect width="360" height="56" rx="8" fill="#111827"/>
+        <text x="14" y="22" font-size="13" font-weight="600" fill="#f1f5f9">Backend Engineer (AI) — Foo</text>
+        <text x="14" y="42" font-size="11" fill="#94a3b8">Score 0.79 · remote · python, langchain</text>
+      </g>
+      <g transform="translate(20, 408)">
+        <text x="0" y="0">⚙️</text>
+        <text x="22" y="0" fill="#38bdf8">→ draft_cover_letter</text>
+      </g>
+      <g transform="translate(20, 434)">
+        <text x="22" y="0" fill="#22c55e">✓ draft_cover_letter · streaming…</text>
+      </g>
+      <g transform="translate(20, 480)">
+        <text x="0" y="0">✅</text>
+        <text x="22" y="0" fill="#22c55e" font-weight="600">Agent finished. 5 jobs saved.</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- footer -->
+  <text x="80" y="740" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="#94a3b8">github.com/Shav-webdev/job-hunt-copilot · 2025</text>
+</svg>

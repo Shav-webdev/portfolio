@@ -1,6 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
+import { useRouter } from "next/navigation"
 import { Button } from "./button"
 import { ExternalLink, Github } from "lucide-react"
 import Image from "next/image"
@@ -12,7 +13,9 @@ interface ProjectCardProps {
     name: string
     description: string
     image: string | StaticImageData
+    images?: (string | StaticImageData)[]
     url: string
+    liveUrl?: string | null
     github: string
     technologies: string[]
     category: string
@@ -23,6 +26,20 @@ interface ProjectCardProps {
 }
 
 export function ProjectCard({ project, onClick }: ProjectCardProps) {
+  const router = useRouter()
+  const liveUrl = project.liveUrl !== undefined ? project.liveUrl : project.url
+  const cardImage = project.images?.[0] ?? project.image
+
+  const handleLiveDemo = (e: React.MouseEvent) => {
+    e.stopPropagation()
+    if (!liveUrl) return
+    if (liveUrl.startsWith("/")) {
+      router.push(liveUrl)
+    } else {
+      window.open(liveUrl, "_blank")
+    }
+  }
+
   return (
     <motion.div
       className="group bg-background rounded-lg border border-border overflow-hidden hover:shadow-lg transition-all duration-300 cursor-pointer h-full flex flex-col"
@@ -30,7 +47,7 @@ export function ProjectCard({ project, onClick }: ProjectCardProps) {
     >
       <div className="relative overflow-hidden">
         <Image
-          src={project.image}
+          src={cardImage}
           alt={project.name}
           width={600}
           height={400}
@@ -42,7 +59,7 @@ export function ProjectCard({ project, onClick }: ProjectCardProps) {
           </div>
         )}
       </div>
-      
+
       <div className="p-6 flex-1 flex flex-col">
         <div className="flex items-center justify-between mb-3">
           <h3 className="text-xl font-semibold text-foreground group-hover:text-primary transition-colors">
@@ -50,17 +67,14 @@ export function ProjectCard({ project, onClick }: ProjectCardProps) {
           </h3>
           <span className="text-sm text-muted-foreground">{project.year}</span>
         </div>
-        
+
         <p className="text-muted-foreground mb-4 line-clamp-3">
           {project.description}
         </p>
-        
+
         <div className="flex flex-wrap gap-2 mb-4">
           {project.technologies.slice(0, 3).map((tech) => (
-            <span
-              key={tech}
-              className="px-2 py-1 bg-muted text-muted-foreground text-xs rounded"
-            >
+            <span key={tech} className="px-2 py-1 bg-muted text-muted-foreground text-xs rounded">
               {tech}
             </span>
           ))}
@@ -70,29 +84,25 @@ export function ProjectCard({ project, onClick }: ProjectCardProps) {
             </span>
           )}
         </div>
-        
+
         <div className="flex gap-2 mt-auto">
+          {liveUrl && (
+            <Button size="sm" variant="outline" className="flex-1" onClick={handleLiveDemo}>
+              <ExternalLink className="w-4 h-4 mr-2" />
+              Live Demo
+            </Button>
+          )}
           <Button
             size="sm"
             variant="outline"
-            className="flex-1"
+            className={liveUrl ? "" : "flex-1"}
             onClick={(e) => {
               e.stopPropagation()
-              window.open(project.url, '_blank')
+              window.open(project.github, "_blank")
             }}
           >
-            <ExternalLink className="w-4 h-4 mr-2" />
-            Live Demo
-          </Button>
-          <Button
-            size="sm"
-            variant="outline"
-            onClick={(e) => {
-              e.stopPropagation()
-              window.open(project.github, '_blank')
-            }}
-          >
-            <Github className="w-4 h-4" />
+            <Github className="w-4 h-4 mr-2" />
+            View Code
           </Button>
         </div>
       </div>

@@ -20,8 +20,13 @@ export function ExperienceLeadership() {
       >
         <motion.div
           variants={fadeInUp}
-          className="bg-background rounded-lg border border-border p-6"
+          whileHover={{ y: -4, transition: { type: "spring", stiffness: 300, damping: 20 } }}
+          className="relative bg-background rounded-lg border border-border p-6 overflow-hidden group"
         >
+          <div
+            className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
+            style={{ background: "linear-gradient(135deg, var(--primary), transparent 60%)", mixBlendMode: "overlay" }}
+          />
           <h3 className="text-xl font-semibold text-foreground mb-4">
             Technical Leadership
           </h3>

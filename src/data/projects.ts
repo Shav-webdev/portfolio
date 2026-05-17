@@ -6,6 +6,10 @@ import dinoImage from "@/assets/img/dino-img.png"
 import fireGameImage from "@/assets/img/fire-game.png"
 import weatherAppImage from "@/assets/img/weather_app.png"
 import videoPlayerImage from "@/assets/img/video-player.png"
+import settingsManagementImage from "@/assets/img/settings-management.png"
+import ticTacToeImage from "@/assets/img/tic-tac-toe.png"
+import jobHuntCopilot1 from "@/assets/img/job-hunt-copilot-1.png"
+import jobHuntCopilot2 from "@/assets/img/job-hunt-copilot-2.png"
 import type { StaticImageData } from "next/image"
 
 export interface Project {
@@ -14,7 +18,9 @@ export interface Project {
   description: string
   longDescription?: string
   image: string | StaticImageData
+  images?: (string | StaticImageData)[]
   url: string
+  liveUrl?: string | null
   github: string
   technologies: string[]
   category: string
@@ -27,6 +33,91 @@ export interface Project {
 }
 
 export const projects: Project[] = [
+  {
+    id: 9,
+    name: "Job Hunt Copilot",
+    description: "An end-to-end AI job-hunt assistant: a LangGraph agent that searches jobs, scores them against your CV, and drafts cover letters — streamed live to a Next.js dashboard. Polyglot monorepo across Next.js, NestJS, and two Python FastAPI services, deployed on Kubernetes via Helm + Tilt.",
+    longDescription: "Job Hunt Copilot is a full-stack AI product I built end-to-end to learn modern agent architecture, multi-service orchestration, and production-shaped infra. The web app (Next.js 16 + NextAuth) gives the user a dashboard, job board, application kanban, and an agent chat that streams tool events over Server-Sent Events. The Nest API (NestJS 11 + Drizzle ORM + Postgres/pgvector) owns auth, CVs, jobs, and applications. A Python ai-core service wraps Gemini for CV parsing, CV↔JD scoring, and streamed cover-letter drafting. A Python agent service runs a LangGraph ReAct agent that uses the API as its tool surface, publishing every tool start/end and LLM token to Redis pub/sub so the web app can render them live. The whole stack runs locally on k3d with a Helm umbrella chart and Tilt hot-reload.",
+    image: jobHuntCopilot1,
+    images: [jobHuntCopilot1, jobHuntCopilot2],
+    url: "https://github.com/Shav-webdev/job-hunt-copilot",
+    liveUrl: "/projects/job-hunt-copilot",
+    github: "https://github.com/Shav-webdev/job-hunt-copilot",
+    technologies: [
+      "Next.js 16",
+      "React 19",
+      "NestJS 11",
+      "TypeScript",
+      "Drizzle ORM",
+      "PostgreSQL + pgvector",
+      "Redis",
+      "Python",
+      "FastAPI",
+      "LangGraph",
+      "Gemini 2.5 Flash",
+      "Server-Sent Events",
+      "Helm",
+      "k3d",
+      "Tilt",
+      "Docker",
+      "pnpm workspaces",
+    ],
+    category: "Full-Stack & AI",
+    featured: true,
+    year: "2026",
+    status: "in-progress",
+    highlights: [
+      "Polyglot monorepo (TS + Python) wired with pnpm workspaces",
+      "LangGraph ReAct agent with a hard 10-tool-call ceiling and friendly Gemini error messages",
+      "Live SSE streaming of agent events (start, tool_start, tool_end, llm_chunk, done) via Redis pub/sub",
+      "Streamed cover-letter generation with Gemini's generate_content_stream",
+      "CV parsing PDF → structured JSON, plus CV↔job scoring with reasoning",
+      "Kubernetes-shaped local dev: Helm umbrella chart + k3d + Tilt with live-reload",
+    ],
+    challenges: [
+      "Designing a clean boundary between the Nest API (data) and Python agent/ai-core (LLM) without coupling",
+      "Streaming agent tool events end-to-end (LangGraph → Redis → FastAPI SSE → Next API proxy → client)",
+      "Handling Gemini free-tier rate limits (20 req/day) gracefully with typed, user-facing error messages",
+      "Setting up a Helm umbrella chart with four subcharts and a Tilt live-update loop",
+    ],
+    results: [
+      "Working agent flow: a goal turns into searched jobs, scored matches, and a drafted cover letter — all visible live",
+      "Local production-shape stack reproducible with a single `tilt up`",
+      "Clean schema (users / cvs / jobs / applications) with Drizzle relations and pgvector ready for semantic search",
+      "Phases 1–4 complete and pushed to GitHub; deploy-to-prod is the next milestone",
+    ],
+  },
+  {
+    id: 10,
+    name: "Settings Management Dashboard",
+    description: "A schema-driven account settings dashboard built with Next.js 16, Material UI 7, and Neon PostgreSQL. Adding a new setting requires only a schema entry — the form renders and persists it automatically across five field types (boolean, text, number, select, multiselect).",
+    longDescription: "Built as a TRIVO technical assignment, this full-stack application demonstrates schema-first thinking and clean architecture. Settings are declared in a central configuration object; the dynamic form adapts automatically with no per-field custom UI logic. Supports boolean, text, number, select, and multiselect field types. Each account's settings are stored independently in Neon PostgreSQL via Drizzle ORM and Next.js Route Handlers. The project follows Feature-Sliced Design (FSD) with strict layer import rules — widgets → features → entities → shared — and is fully type-safe from schema definition through to the database.",
+    image: settingsManagementImage,
+    url: "https://settings-management.vercel.app/",
+    github: "https://github.com/Shav-webdev/settings-management",
+    technologies: ["Next.js", "React 19", "TypeScript", "Material UI", "React Hook Form", "Drizzle ORM", "Neon PostgreSQL", "Feature-Sliced Design"],
+    category: "Full Stack Application",
+    featured: true,
+    year: "2025",
+    status: "completed",
+    highlights: [
+      "Schema-driven UI — new settings appear in the form with zero custom UI code",
+      "Five field types: boolean, text, number, select, multiselect",
+      "Feature-Sliced Design with enforced layer import rules",
+      "Neon PostgreSQL persistence via Drizzle ORM and Route Handlers",
+      "Material UI 7 with SSR-safe Emotion cache for App Router",
+    ],
+    challenges: [
+      "Inferring a fully type-safe SettingsValues type directly from the schema object",
+      "Configuring MUI Emotion for correct SSR hydration in Next.js App Router",
+      "Enforcing FSD import boundaries across all feature layers",
+    ],
+    results: [
+      "Extensible settings system — new field types need one switch branch only",
+      "Production deployment on Vercel with Neon Postgres",
+      "Fully type-safe data flow from schema to UI to database",
+    ],
+  },
   {
     id: 8,
     name: "Custom Video Player",
@@ -241,6 +332,35 @@ export const projects: Project[] = [
     ]
   },
   {
+    id: 11,
+    name: "Tic Tac Toe",
+    description: "A classic Tic Tac Toe game built with vanilla JavaScript. Features two-player mode, win detection, draw detection, and score tracking — all with a clean, responsive interface.",
+    longDescription: "A clean implementation of the classic Tic Tac Toe game using vanilla JavaScript, HTML5, and CSS3. The game supports two-player mode on the same device with real-time win and draw detection across all rows, columns, and diagonals. Score tracking persists across rounds and the board resets smoothly after each game. Built without any frameworks, it demonstrates core JavaScript logic, DOM manipulation, and event handling.",
+    image: ticTacToeImage,
+    url: "https://shav-webdev.github.io/Tic-Tac-Toe/",
+    github: "https://github.com/Shav-webdev/Tic-Tac-Toe",
+    technologies: ["JavaScript", "HTML5", "CSS3", "DOM Manipulation", "Game Logic"],
+    category: "Game Development",
+    featured: false,
+    year: "2021",
+    status: "completed",
+    highlights: [
+      "Two-player mode on the same device",
+      "Win detection across all rows, columns, and diagonals",
+      "Draw detection and score tracking across rounds",
+      "Smooth board reset between games",
+    ],
+    challenges: [
+      "Implementing complete win-condition checking for all lines",
+      "Managing game state and turn switching without a framework",
+    ],
+    results: [
+      "Fully playable two-player game",
+      "Zero external dependencies",
+      "Clean, responsive interface",
+    ]
+  },
+  {
     id: 7,
     name: "Weather Application",
     description: "A responsive weather application that fetches real-time weather data from APIs. Features location-based weather information and beautiful UI design.",
@@ -274,10 +394,12 @@ export const projects: Project[] = [
 
 export const categories = [
   "All",
-  "Web Application", 
-  "React Application", 
-  "UI Component", 
-  "Data Visualization", 
+  "Full-Stack & AI",
+  "Full Stack Application",
+  "Web Application",
+  "React Application",
+  "UI Component",
+  "Data Visualization",
   "Game Development"
 ]
 

@@ -73,9 +73,14 @@ export function CareerStats({ stats }: CareerStatsProps) {
           <motion.div
             key={item.key}
             variants={staggerItem}
-            className="text-center p-4 bg-background rounded-lg border border-border hover:shadow-md transition-shadow"
+            whileHover={{ y: -4, transition: { type: "spring", stiffness: 300, damping: 20 } }}
+            className="relative text-center p-4 bg-background rounded-lg border border-border overflow-hidden group"
           >
-            <div className={`w-12 h-12 mx-auto mb-3 ${item.color}`}>
+            <div
+              className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
+              style={{ background: "radial-gradient(circle at 50% 0%, var(--primary), transparent 70%)", mixBlendMode: "overlay" }}
+            />
+            <div className={`w-12 h-12 mx-auto mb-3 group-hover:scale-110 transition-transform duration-300 ${item.color}`}>
               <Icon className="w-full h-full" />
             </div>
             <div className="text-2xl font-bold text-foreground mb-1">
