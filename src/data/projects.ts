@@ -10,6 +10,7 @@ import settingsManagementImage from "@/assets/img/settings-management.png"
 import ticTacToeImage from "@/assets/img/tic-tac-toe.png"
 import jobHuntCopilot1 from "@/assets/img/job-hunt-copilot-1.png"
 import jobHuntCopilot2 from "@/assets/img/job-hunt-copilot-2.png"
+import crashGameImage from "@/assets/img/crash-game.png"
 import type { StaticImageData } from "next/image"
 
 export interface Project {
@@ -359,6 +360,38 @@ export const projects: Project[] = [
       "Zero external dependencies",
       "Clean, responsive interface",
     ]
+  },
+  {
+    id: 12,
+    name: "Crash Game",
+    description: "An Aviator-style crash betting game built with React 18, TypeScript, and Zustand. Demonstrates senior-level iGaming architecture: hot/cold path separation, authoritative server simulation, Canvas + requestAnimationFrame rendering, and a transport abstraction for real WebSocket backends.",
+    longDescription: "A reference implementation of an Aviator-style crash betting game that runs entirely in-browser via a mock authoritative server. The project is architected around production-grade iGaming patterns: a hot path for multiplier updates (~20x/sec) uses a module-level ref to bypass React re-renders, while game phase and balance changes flow through Zustand selectors. The multiplier chart renders on an HTML5 Canvas with requestAnimationFrame, and React only re-renders on phase transitions. A Transport interface decouples the game logic from the underlying connection, making it trivial to swap the in-browser MockServer for a real WebSocket backend. The WebSocket layer includes exponential backoff with jitter, heartbeat monitoring, and buffered sends for disconnection recovery.",
+    image: crashGameImage,
+    url: "https://shav-webdev.github.io/crash-game/",
+    liveUrl: "https://shav-webdev.github.io/crash-game/",
+    github: "https://github.com/Shav-webdev/crash-game",
+    technologies: ["React 18", "TypeScript", "Zustand", "HTML5 Canvas", "WebSockets", "Vite", "requestAnimationFrame"],
+    category: "Game Development",
+    featured: false,
+    year: "2026",
+    status: "completed",
+    highlights: [
+      "Hot/cold path separation — multiplier updates via ref bypass React (~20x/sec)",
+      "Canvas + requestAnimationFrame for smooth live multiplier chart",
+      "Transport abstraction — swap MockServer for ReliableSocket without touching game logic",
+      "WebSocket resilience: exponential backoff, jitter, heartbeat, and send buffering",
+      "Selector-based Zustand subscriptions prevent cascade invalidation",
+    ],
+    challenges: [
+      "Preventing unnecessary React re-renders at 20+ updates per second",
+      "Designing a clean transport interface that works for both mock and real backends",
+      "Synchronising optimistic UI with authoritative server reconciliation",
+    ],
+    results: [
+      "Fully playable game with balance, staking, and cashout mechanics",
+      "Zero-dependency mock server running entirely in the browser",
+      "Production-shaped architecture ready to wire up a real backend",
+    ],
   },
   {
     id: 7,
