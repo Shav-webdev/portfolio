@@ -179,7 +179,7 @@ export function PostEditor({ post }: Props) {
         >
           {saving ? "Saving…" : post ? "Save changes" : "Create post"}
         </button>
-        <a href="/admin" className="px-4 py-2 rounded-md text-sm border hover:bg-muted transition-colors">
+        <a href="/admin/blog" className="px-4 py-2 rounded-md text-sm border hover:bg-muted transition-colors">
           Cancel
         </a>
       </div>

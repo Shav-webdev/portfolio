@@ -10,7 +10,7 @@ export async function createPost(data: Omit<NewPost, "id" | "createdAt" | "updat
   const [post] = await db.insert(posts).values(data).returning()
   revalidatePath("/blog")
   revalidatePath("/admin")
-  redirect(`/admin/${post.id}`)
+  redirect(`/admin/blog/${post.id}`)
 }
 
 export async function updatePost(
@@ -30,7 +30,7 @@ export async function deletePost(id: string) {
   await db.delete(posts).where(eq(posts.id, id))
   revalidatePath("/blog")
   revalidatePath("/admin")
-  redirect("/admin")
+  redirect("/admin/blog")
 }
 
 export async function togglePublished(id: string, published: boolean) {

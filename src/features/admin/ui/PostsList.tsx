@@ -36,7 +36,7 @@ export function PostsList({ posts }: Props) {
               {post.published ? "Unpublish" : "Publish"}
             </button>
             <Link
-              href={`/admin/${post.id}`}
+              href={`/admin/blog/${post.id}`}
               className="text-xs border rounded px-2 py-1 hover:bg-muted transition-colors"
             >
               Edit
