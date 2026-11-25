@@ -1,7 +1,11 @@
 import { auth } from "@/lib/auth"
 import Anthropic from "@anthropic-ai/sdk"
 
-const client = new Anthropic()
+const client = new Anthropic({
+  defaultHeaders: {
+    "anthropic-workspace-id": process.env.ANTHROPIC_WORKSPACE_ID ?? "",
+  },
+})
 
 export async function POST(req: Request) {
   const session = await auth()
