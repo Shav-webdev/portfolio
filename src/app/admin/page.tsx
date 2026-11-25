@@ -4,6 +4,7 @@ import { desc } from "drizzle-orm"
 import { PostsList } from "@/features/admin/ui/PostsList"
 import Link from "next/link"
 
+
 export default async function AdminPage() {
   const allPosts = await db.select().from(posts).orderBy(desc(posts.createdAt))
 

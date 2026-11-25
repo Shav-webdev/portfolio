@@ -6,6 +6,7 @@ import { notFound } from "next/navigation"
 import { Navigation } from "@/components/navigation"
 import { PostContent } from "@/features/blog/ui/PostContent"
 
+
 type Props = { params: Promise<{ slug: string }> }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {

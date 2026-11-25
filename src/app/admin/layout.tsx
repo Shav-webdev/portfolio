@@ -3,6 +3,7 @@ import { AdminTopbar } from "@/features/admin/ui/AdminTopbar"
 import { NAV_ITEMS } from "@/features/admin/config/nav"
 import { headers } from "next/headers"
 
+
 async function getPageTitle() {
   const headersList = await headers()
   const pathname = headersList.get("x-pathname") ?? ""

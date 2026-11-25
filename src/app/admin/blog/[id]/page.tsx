@@ -4,6 +4,7 @@ import { eq } from "drizzle-orm"
 import { notFound } from "next/navigation"
 import { PostEditor } from "@/features/admin/ui/PostEditor"
 
+
 type Props = { params: Promise<{ id: string }> }
 
 export default async function EditPostPage({ params }: Props) {

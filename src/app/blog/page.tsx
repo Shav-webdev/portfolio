@@ -5,6 +5,7 @@ import { eq, desc } from "drizzle-orm"
 import { Navigation } from "@/components/navigation"
 import { BlogList } from "@/features/blog/ui/BlogList"
 
+
 export const metadata: Metadata = {
   title: "Blog — Shavarsh Abrahamyan",
   description: "Technical articles on React, Next.js, TypeScript, and software engineering.",

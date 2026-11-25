@@ -8,6 +8,7 @@ export const metadata: Metadata = {
 }
 import { ProjectsGallery } from "@/features/ProjectsGallery"
 
+
 export default function Projects() {
   return (
     <div className="min-h-screen bg-background">
