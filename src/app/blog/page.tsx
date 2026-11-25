@@ -1,4 +1,7 @@
 import type { Metadata } from "next"
+
+export const dynamic = "force-dynamic"
+
 import { db } from "@/lib/db"
 import { posts } from "@/lib/db/schema"
 import { eq, desc } from "drizzle-orm"
