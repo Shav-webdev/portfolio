@@ -8,6 +8,7 @@ import { StructuredData, getProfilePageSchema } from "@/features/StructuredData"
 import GoogleAnalytics from "@/components/GoogleAnalytics";
 import { GA_MEASUREMENT_ID } from "@/lib/GoogleAnalytics";
 
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],

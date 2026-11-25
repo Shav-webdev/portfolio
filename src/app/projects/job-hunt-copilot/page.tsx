@@ -15,6 +15,7 @@ import { JobHuntTechStack } from "@/features/JobHuntTechStack"
 import { JobHuntLearnings } from "@/features/JobHuntLearnings"
 import { JobHuntCTA } from "@/features/JobHuntCTA"
 
+
 export default function JobHuntCopilotCaseStudy() {
   return (
     <div className="min-h-screen bg-background">

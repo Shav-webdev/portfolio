@@ -11,6 +11,7 @@ import { ContactDetails } from "@/features/ContactDetails"
 import { ContactServices } from "@/features/ContactServices"
 import { StructuredData, getContactPageSchema } from "@/features/StructuredData"
 
+
 export default function Contact() {
   return (
     <div className="min-h-screen bg-background">

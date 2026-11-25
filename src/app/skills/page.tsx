@@ -11,6 +11,7 @@ import { SkillsCertifications } from "@/features/SkillsCertifications"
 import { SkillsCategories } from "@/features/SkillsCategories"
 import { SkillsSummary } from "@/features/SkillsSummary"
 
+
 export default function Skills() {
   return (
     <div className="min-h-screen bg-background">

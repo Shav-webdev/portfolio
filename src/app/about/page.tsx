@@ -11,6 +11,7 @@ import { AboutEducation } from "@/features/AboutEducation"
 import { AboutPhilosophy } from "@/features/AboutPhilosophy"
 import { AboutFutureGoals } from "@/features/AboutFutureGoals"
 
+
 export default function About() {
   return (
     <div className="min-h-screen bg-background">
